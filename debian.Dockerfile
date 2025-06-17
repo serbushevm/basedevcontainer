@@ -57,9 +57,9 @@ RUN chmod +x /root/.ssh.sh
 # Retro-compatibility symlink
 RUN  ln -s /root/.ssh.sh /root/.windows.sh
 
-# Setup curl
+# Setup curl and vim
 RUN apt-get update -y && \
-    apt-get install -y --no-install-recommends curl && \
+    apt-get install -y --no-install-recommends curl vim && \
     rm -r /var/cache/* /var/lib/apt/lists/*
 
 # Setup shell

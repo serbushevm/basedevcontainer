@@ -48,8 +48,8 @@ RUN ln -s /root/.ssh.sh /root/.windows.sh
 
 WORKDIR /root
 
-# Setup curl && bash
-RUN apk add -q --update --progress --no-cache curl bash
+# Setup curl && bash && vim
+RUN apk add -q --update --progress --no-cache curl bash vim
 
 # Setup shell for root and ${USERNAME}
 ENTRYPOINT [ "/bin/zsh" ]
