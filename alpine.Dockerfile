@@ -49,7 +49,7 @@ RUN ln -s /root/.ssh.sh /root/.windows.sh
 WORKDIR /root
 
 # Setup curl && bash && vim
-RUN apk add -q --update --progress --no-cache curl bash vim libc6-compat
+RUN apk add -q --update --progress --no-cache curl bash vim gcompat
 
 # Setup shell for root and ${USERNAME}
 ENTRYPOINT [ "/bin/zsh" ]
