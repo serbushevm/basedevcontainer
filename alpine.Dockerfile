@@ -48,6 +48,9 @@ RUN ln -s /root/.ssh.sh /root/.windows.sh
 
 WORKDIR /root
 
+# Setup curl && bash
+RUN apk add -q --update --progress --no-cache curl bash
+
 # Setup shell for root and ${USERNAME}
 ENTRYPOINT [ "/bin/zsh" ]
 RUN apk add -q --update --progress --no-cache zsh nano zsh-vcs
