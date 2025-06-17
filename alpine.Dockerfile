@@ -1,4 +1,4 @@
-ARG ALPINE_VERSION=3.20
+ARG ALPINE_VERSION=3.22
 
 ARG DOCKER_VERSION=v27.3.1
 ARG COMPOSE_VERSION=v2.29.7
@@ -49,7 +49,7 @@ RUN ln -s /root/.ssh.sh /root/.windows.sh
 WORKDIR /root
 
 # Setup curl && bash && vim
-RUN apk add -q --update --progress --no-cache curl bash vim
+RUN apk add -q --update --progress --no-cache curl bash vim libc6-compat
 
 # Setup shell for root and ${USERNAME}
 ENTRYPOINT [ "/bin/zsh" ]
